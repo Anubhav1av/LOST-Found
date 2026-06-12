@@ -131,6 +131,39 @@ nav a,
   border-bottom: 4px solid var(--lf-amber);
 }
 
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--lf-cream) !important;
+  text-decoration: none !important;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.brand-mark span {
+  color: var(--lf-cream);
+}
+
+.dropdown-menu {
+  padding: 8px;
+  background: var(--lf-paper) !important;
+  border: 1px solid rgba(79, 37, 46, 0.16) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--lf-shadow);
+}
+
+.dropdown-item {
+  border-radius: 8px;
+  color: var(--lf-plum) !important;
+  font-weight: 800 !important;
+}
+
+.dropdown-item:hover {
+  color: var(--lf-plum) !important;
+  background: var(--lf-amber) !important;
+}
+
 .navbar img,
 .logo,
 .form1 img,
@@ -143,9 +176,19 @@ nav a,
 }
 
 .a1 {
+  width: 100%;
+  margin: 0;
+  padding: 10px 18px;
   background: var(--lf-amber) !important;
   color: var(--lf-plum) !important;
   border: 0 !important;
+}
+
+.a1 p {
+  margin: 0;
+  color: var(--lf-plum) !important;
+  font-weight: 800;
+  text-align: center;
 }
 
 .car {
@@ -188,7 +231,38 @@ nav a,
   margin-bottom: 10px !important;
   color: var(--lf-amber) !important;
   font-weight: 900;
-  text-transform: uppercase;
+}
+
+.home-search {
+  display: flex;
+  gap: 10px;
+  width: min(680px, 100%);
+  margin-top: 24px;
+  padding: 8px;
+  background: rgba(255, 253, 240, 0.12);
+  border: 1px solid rgba(255, 247, 197, 0.2);
+  border-radius: 8px;
+}
+
+.home-search input {
+  flex: 1;
+  min-width: 180px;
+  height: 48px;
+  padding: 0 16px;
+  color: var(--lf-ink) !important;
+  background: var(--lf-paper) !important;
+}
+
+.home-search button {
+  min-width: 140px;
+  color: var(--lf-plum) !important;
+  background: var(--lf-amber) !important;
+  box-shadow: none;
+}
+
+.home-search button:hover {
+  color: var(--lf-cream) !important;
+  background: #7a3444 !important;
 }
 
 .hero-actions {
@@ -198,27 +272,45 @@ nav a,
   justify-content: flex-end;
 }
 
-.quote {
-  left: 0 !important;
-  right: 0 !important;
-  top: 72% !important;
-  width: min(760px, 90%) !important;
-  margin: 0 auto !important;
-  padding: 18px 24px;
-  color: var(--lf-cream) !important;
-  background: rgba(79, 37, 46, 0.86);
-  border: 1px solid rgba(255, 247, 197, 0.55);
-  border-radius: 8px;
-  text-shadow: none !important;
-  letter-spacing: 0 !important;
+.hero-actions .btn {
+  min-width: 178px;
+  min-height: 48px;
+  color: var(--lf-plum) !important;
+  background: var(--lf-amber) !important;
 }
 
-.bt {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin: 16px auto 32px;
+.hero-actions .btn + .btn {
+  color: var(--lf-cream) !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 247, 197, 0.42) !important;
+}
+
+.hero-actions .btn:hover {
+  color: var(--lf-plum) !important;
+  background: var(--lf-cream) !important;
+}
+
+.how-it-works {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.how-it-works p {
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.how-it-works ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.how-it-works li {
+  line-height: 1.55;
+  font-weight: 600;
 }
 
 input[type="submit"],
@@ -285,12 +377,11 @@ sub,
 .footer {
   background: var(--lf-plum) !important;
   margin-top: 72px !important;
+  min-height: auto !important;
+  padding: 28px 50px !important;
 }
 
-.footer p,
-.footer a,
-.social-icon__link,
-.menu__link {
+.footer p {
   color: var(--lf-cream) !important;
 }
 
@@ -538,16 +629,6 @@ body:has(.data) .container1 {
 }
 
 @media (max-width: 720px) {
-  .quote {
-    position: relative !important;
-    top: auto !important;
-    margin-top: 18px !important;
-  }
-
-  .bt {
-    padding: 0 16px;
-  }
-
   .home-hero {
     grid-template-columns: 1fr;
     padding: 28px;
@@ -557,9 +638,8 @@ body:has(.data) .container1 {
     justify-content: flex-start;
   }
 
-  .bt input[type="submit"] {
-    width: 100% !important;
-    margin: 0 !important;
+  .home-search {
+    flex-direction: column;
   }
 
   .contennt,

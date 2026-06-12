@@ -139,46 +139,6 @@
   flex-direction: column;
 }
 
-.social-icon,
-.menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-
-.social-icon__item,
-.menu__item {
-  list-style: none;
-}
-
-.social-icon__link {
-  font-size: 2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-}
-.social-icon__link:hover {
-  transform: translateY(-10px);
-}
-
-.menu__link {
-  font-size: 1.2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-  text-decoration: none;
-  opacity: 0.75;
-  font-weight: 300;
-}
-
-.menu__link:hover {
-  opacity: 1;
-}
 
 .footer p {
   color: #fff;
@@ -246,9 +206,11 @@
 
         <div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <img src="img/logo.png" width="45px">
                 <div class="container-fluid">
-                    <div class="nm">LOST AND FOUND</div>
+                    <a class="brand-mark" href="index.html">
+                        <img src="img/logo.png" width="45px" alt="Lost And Found logo">
+                        <span>Lost And Found</span>
+                    </a>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
@@ -265,164 +227,70 @@
 
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
-                                    href="login.html"><b>Login</b></a>
-                            </li>
-
-                           
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="feedback.html"><b>Feedback</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
                                     href="contact.html"><b>Contact Us</b></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
                                     href="about.html"><b>About</b></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="dashboard.html"><b>Dashboard</b></a>
+                            <li class="nav-item dropdown">
+                                <button class="nav-link dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><b>Report</b></button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="html/Lost_Info.html">Lost Item</a></li>
+                                    <li><a class="dropdown-item" href="html/Found_Info.html">Found Item</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
-                                    href="html/Lost_Info.html"><b>Lost Item</b></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="html/Found_Info.html"><b>Found Item</b></a>
+                                    href="login.html"><b>Login</b></a>
                             </li>
 
                         </ul>
-                        <!-- <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
                     </div>
                 </div>
             </nav>
         </div>
         <div class="a1">
-            <fieldset>
-                <marquee>
-                    
-                    WELCOME TO THE LOST AND FOUND WEBSITE. WE ALL HERE TO HELP
-                    YOU.
-                </marquee>
-            </fieldset>
+            <p>Welcome to Lost And Found. We are here to help you reconnect with your belongings.</p>
         </div>
         <section class="home-hero">
             <div>
                 <p class="hero-kicker">Lost something important?</p>
                 <h1>Search. Find. Claim.</h1>
-                <p>Report lost items, share found belongings, and connect with the right person quickly.</p>
+                <p>Search recent reports first, then submit a lost or found item if you need help from the community.</p>
+                <form class="home-search" action="dashboard.html" method="get">
+                    <input type="search" name="q" placeholder="Search by item, color, brand, or location" aria-label="Search lost and found items">
+                    <button type="submit">Search Items</button>
+                </form>
             </div>
             <div class="hero-actions">
                 <a href="html/Lost_Info.html" class="btn btn-outline-primary">Report Lost Item</a>
                 <a href="html/Found_Info.html" class="btn btn-outline-primary">Report Found Item</a>
             </div>
         </section>
-        <div class="quote">
-            <center> <b>Search. Find. Claim.</b></center>
-        </div>
-
-       <br>
-        <div class="bt">
-            <a href="html/Lost_Info.html"><input type="submit" value="LOST ITEM"></a>
-           <a href="html/recent_posts.jsp"> <input type="submit" value="VIEW RECENT POSTS"></a>
-           <a href="html/Found_Info.html"> <input type="submit" value="FOUND ITEM"></a>
-        </div>
-        <br><br><br><br><br>
         <div class="para">
-            <b><br>
-                <div class="head-1">
-                    <center> WHAT ARE WE ACTUALLY DO? </center>
-                </div>
-               
-            </b> <br>
-            <b>
-                <p>This is online web application to help all the people's who
-                    may
-                    lose their commodity inside the institution premises, to
-                    login and search for them online,
-                    and legally claim them if they find it. The system is
-                    authentic and has the ability to record
-                    information of each user and its activity on this portal,
-                    and keeps a record of all lost and
-                    claimed items in its database. The admin panel of this
-                    software manages all the records of
-                    data which is operated by an appointed in charge.
-                </p>
-            </b>
-        </div>
-        <br><br>
-        <footer class="footer">
-            <div class="waves">
-              <div class="wave" id="wave1"></div>
-              <div class="wave" id="wave2"></div>
-              <div class="wave" id="wave3"></div>
-              <div class="wave" id="wave4"></div>
+            <div class="head-1">
+                <center>How It Works</center>
             </div>
-            <ul class="social-icon">
-              <li class="social-icon__item"><a class="social-icon__link" href="#">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a></li>
-              <li class="social-icon__item"><a class="social-icon__link" href="#">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a></li>
-              <li class="social-icon__item"><a class="social-icon__link" href="#">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a></li>
-              <li class="social-icon__item"><a class="social-icon__link" href="#">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a></li>
-            </ul>
-            <ul class="menu">
-              <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
-              <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
-              <li class="menu__item"><a class="menu__link" href="index.html">Services</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-              <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
-        
-            </ul>
-            <p>© 2026 Lost And Found Team</p>
-          </footer>
-        <!-- <div class="foter">
-
-                <footer class="bg-dark text-center text-white">
-                <div class="containerf1">
-
-                    <section class="mb-3">
-                        <a href="#">Instagram</a><br>
-                        <a href="#">Facebook</a> <br>
-                    </section>
-                </div>
-                <div class="containerf2">
-                    <section class="mb-4">
-                        <a href="#">LOST AND FOUND</a><br>
-                        <a href="about.html">About us</a> <br>
-                        <a href="contact.html">Contact us</a>
-                    </section>
-                </div>
-                <div class="containerf3">
-
-                    <section class="mb-3">
-                        <a href="#">Twitter</a><br>
-                        <a href="#">YouTube</a> <br>
-                    </section>
-                </div>
-                <div class="text-center p-3"
-                    style="background-color: rgba(0, 0, 0, 0.2);">
-                    © 2026 Lost And Found Team
-                    <a class="text-white" href="#">LostandFound.com</a>
-                </div> 
-
-            </footer> -->
-
+            <div class="how-it-works">
+                <p>Lost And Found helps people report missing belongings, share found items, and contact the right person to claim them.</p>
+                <ul>
+                    <li>Search existing item reports before submitting a new request.</li>
+                    <li>Report lost or found items with details such as location, color, and category.</li>
+                    <li>Use contact details to verify ownership and arrange a safe return.</li>
+                </ul>
+            </div>
         </div>
+        <footer class="footer">
+            <p>Need help with a lost or found item? Contact the Lost And Found team.</p>
+            <p>© 2026 Lost And Found Team</p>
+        </footer>
     </body>
 
 </html>
+
+
+
 
 
