@@ -49,6 +49,16 @@ con = DriverManager.getConnection("jdbc:mysql://localhost:3306/landf", "root", "
 	<nav class="navbar" style="background-color: green; height: 50px">
 		<a href="#" class="user">| USER LOGIN</a>
 	</nav>
+	<div class="site-nav">
+		<a class="brand-link" href="../index.html">Home</a>
+		<a href="Lost_Info.html">Lost Item</a>
+		<a href="Found_Info.html">Found Item</a>
+		<a href="../dashboard.html">Dashboard</a>
+		<a href="../about.html">About</a>
+		<a href="../contact.html">Contact</a>
+		<a href="../login.html">Login</a>
+		<a href="../signup.html">Signup</a>
+	</div>
 	<%
 	Statement stmt = con.createStatement();
 	ResultSet rs = stmt.executeQuery("select * from lost");

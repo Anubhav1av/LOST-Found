@@ -77,6 +77,16 @@ input[type="text"] {
 </head>
 
 <body>
+	<div class="site-nav">
+		<a class="brand-link" href="index.html">Home</a>
+		<a href="html/Lost_Info.html">Lost Item</a>
+		<a href="html/Found_Info.html">Found Item</a>
+		<a href="html/recent_posts.jsp">Recent Posts</a>
+		<a href="dashboard.html">Dashboard</a>
+		<a href="about.html">About</a>
+		<a href="contact.html">Contact</a>
+		<a href="login.html">Login</a>
+	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
