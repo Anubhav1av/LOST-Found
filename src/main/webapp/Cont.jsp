@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <html lang="en">
 
@@ -81,8 +81,6 @@ input[type="text"] {
 		<a class="brand-link" href="index.html">Home</a>
 		<a href="html/Lost_Info.html">Lost Item</a>
 		<a href="html/Found_Info.html">Found Item</a>
-		<a href="html/recent_posts.jsp">Recent Posts</a>
-		<a href="dashboard.html">Dashboard</a>
 		<a href="about.html">About</a>
 		<a href="contact.html">Contact</a>
 		<a href="login.html">Login</a>
@@ -97,7 +95,7 @@ input[type="text"] {
 	<center>
 		<h3>Contact</h3>
 	</center>
-	<form action="http://localhost:8082/LostFound/Claim" method="post">
+	<form action="Claim" method="post">
 		<%
 		String email = request.getParameter("email");
 		String item = request.getParameter("item");
@@ -146,3 +144,4 @@ input[type="text"] {
 </body>
 
 </html>
+

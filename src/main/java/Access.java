@@ -21,9 +21,9 @@ public class Access extends HttpServlet {
 		String buttonValue = request.getParameter("button");
 		
 		if ("Submit Lost Item".equals(buttonValue)) {
-			response.sendRedirect("html/Lost_Info.jsp");
+			response.sendRedirect("html/Lost_Info.html");
 		} else if ("Submit Found Item".equals(buttonValue)) {
-			response.sendRedirect("html/Found_Info.jsp");
+			response.sendRedirect("html/Found_Info.html");
 		} else {
 
 			response.getWriter().write("Invalid button click");

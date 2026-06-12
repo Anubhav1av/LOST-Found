@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+﻿<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.io.*"%>
@@ -53,7 +53,6 @@ con = DriverManager.getConnection("jdbc:mysql://localhost:3306/landf", "root", "
 		<a class="brand-link" href="../index.html">Home</a>
 		<a href="Lost_Info.html">Lost Item</a>
 		<a href="Found_Info.html">Found Item</a>
-		<a href="../dashboard.html">Dashboard</a>
 		<a href="../about.html">About</a>
 		<a href="../contact.html">Contact</a>
 		<a href="../login.html">Login</a>
@@ -77,7 +76,7 @@ con = DriverManager.getConnection("jdbc:mysql://localhost:3306/landf", "root", "
 								<div class="card-body">
 									<h5 class="card-title"><%=rs.getString(2)%></h5>
 									<p class="card-text"><%=rs.getString(9)%></p>
-									<form action="http://localhost:8082/LostFound/Cont.jsp" method="post">
+									<form action="../Cont.jsp" method="post">
 										<input type="hidden" id="email" name="email"
 											value="<%=rs.getString(14)%>"> 
 										<input type="hidden"
@@ -138,3 +137,4 @@ con = DriverManager.getConnection("jdbc:mysql://localhost:3306/landf", "root", "
 		crossorigin="anonymous"></script>
 </body>
 </html>
+

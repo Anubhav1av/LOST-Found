@@ -32,7 +32,7 @@ public class Claim extends HttpServlet {
 		String dec = request.getParameter("dec");
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/landf", "root", "");
 			
 			p=con.createStatement();
@@ -40,7 +40,7 @@ public class Claim extends HttpServlet {
 			int i=p.executeUpdate("INSERT INTO `claim`(`name`, `email`, `item_id`, `item`, `dec`) VALUES ('"+nm+"','"+email+"',"+id+",'"+item+"','"+dec+"')");
 			
 			out.println("<html><body><script type=\\\"text/javascript\\\">window.alert('Item claimed wait for admin response')</script></body></html>");
-			response.sendRedirect("html/recent_posts.jsp");
+			response.sendRedirect("dashboard.html");
 		} catch (Exception e) {
 		}
 		

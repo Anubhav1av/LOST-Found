@@ -35,7 +35,7 @@ public class Lost extends HttpServlet
         try{
         	
         	
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
 		con=DriverManager.getConnection("jdbc:mysql://localhost:3306/landf","root","");
 		p=con.prepareStatement("INSERT INTO `lost`(`what_lost`, `date`, `category`, `time`, `brand`, `p_color`, `s_color`, `info`, `location`, `zip`, `fname`, `lname`, `email`, `phn`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         
@@ -63,7 +63,7 @@ public class Lost extends HttpServlet
         if(n!=0)
         {
             out.println("<html><script>window.alert('Thank you')</script></html>");
-            res.sendRedirect("html/recent_posts.html");
+            res.sendRedirect("dashboard.html");
         }
         else{
             out.println("<html><script>window.alert('Something wrong')</script></html>");
